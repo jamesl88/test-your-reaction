@@ -9,8 +9,6 @@ function getRandomColor() {
 
 var clickedTime; var createdTime; var reactionTime;
 
-Date.now();
-
 function makeBox() {
 
   createdTime = Date.now();
@@ -33,8 +31,8 @@ function makeBox() {
 
     left = left + 300;
 
-    document.getElementById("box").style.top=top+"px"
-    document.getElementById("box").style.left=top+"px"
+    document.getElementById("box").style.top=top+"px";
+    document.getElementById("box").style.left=top+"px";
 
     document.getElementById("box").style.backgroundColor=getRandomColor();
 
@@ -43,8 +41,7 @@ function makeBox() {
     createdTime=Date.now();
 
   }, time);
-
-}
+};
 
 document.getElementById("box").onclick=function() {
   clickedTime = Date.now();
@@ -55,6 +52,6 @@ document.getElementById("box").onclick=function() {
 
   this.style.display="none";
   makeBox();
-}
+};
 
 makeBox();
